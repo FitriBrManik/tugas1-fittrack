@@ -16,3 +16,19 @@ public class Member {
     private static final String TELEPON_DEFAULT = "-";
     private static final String TANGGAL_DEFAULT = "-";
 }
+
+/**
+     * Constructor lengkap dengan 4 parameter.
+     * Mengisi nilai atribut melalui setter untuk menjamin validasi.
+     *
+     * @param nama          nama lengkap member
+     * @param noTelepon     nomor telepon aktif member
+     * @param tanggalDaftar tanggal pertama pendaftaran
+     * @param jenisPaket    jenis paket keanggotaan (Basic, Premium, VIP)
+     */
+    public Member(String nama, String noTelepon, String tanggalDaftar, String jenisPaket) {
+        setNama(nama);
+        setNoTelepon(noTelepon);
+        setTanggalDaftar(tanggalDaftar);
+        setJenisPaket(jenisPaket);
+    }
