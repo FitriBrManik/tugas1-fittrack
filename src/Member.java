@@ -43,3 +43,12 @@ public class Member {
     public Member(String nama, String noTelepon, String tanggalDaftar) {
         this(nama, noTelepon, tanggalDaftar, PAKET_BASIC);
     }
+
+/**
+     * Mengambil nama member.
+     *
+     * @return nama member
+     */
+    public String getNama() {
+        return nama;
+    }
