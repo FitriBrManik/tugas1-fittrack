@@ -32,3 +32,14 @@ public class Member {
         setTanggalDaftar(tanggalDaftar);
         setJenisPaket(jenisPaket);
     }
+
+**
+     * Constructor tanpa paket. Jenis paket otomatis diisi Basic.
+     *
+     * @param nama          nama lengkap member
+     * @param noTelepon     nomor telepon aktif member
+     * @param tanggalDaftar tanggal pertama pendaftaran
+     */
+    public Member(String nama, String noTelepon, String tanggalDaftar) {
+        this(nama, noTelepon, tanggalDaftar, PAKET_BASIC);
+    }
