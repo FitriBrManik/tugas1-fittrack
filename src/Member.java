@@ -52,3 +52,17 @@ public class Member {
     public String getNama() {
         return nama;
     }
+
+/**
+     * Mengubah nama member. Jika kosong atau hanya spasi, nama lama
+     * dipertahankan dan pesan penolakan dicetak.
+     *
+     * @param nama nama baru, tidak boleh kosong
+     */
+    public void setNama(String nama) {
+        if (nama == null || nama.trim().isEmpty()) {
+            System.out.println("Nama tidak boleh kosong atau hanya berisi spasi");
+            return;
+        }
+        this.nama = nama;
+    }
