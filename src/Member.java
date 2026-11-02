@@ -18,4 +18,23 @@ public class Member {
     private String tanggalDaftar = NILAI_KOSONG;
     private String jenisPaket = PAKET_BASIC;
 
+    /**
+     * Membuat member dengan data lengkap. Semua nilai diisi lewat setter
+     * sehingga validasi tetap berjalan.
+     *
+     * @param nama          nama lengkap member
+     * @param noTelepon     nomor telepon, diawali 0 dan minimal 10 digit
+     * @param tanggalDaftar tanggal pendaftaran, contoh 17-08-2026
+     * @param jenisPaket    Basic, Premium, atau VIP
+     */
+    public Member(String nama, String noTelepon, String tanggalDaftar, String jenisPaket) {
+        setNama(nama);
+        setNoTelepon(noTelepon);
+        setTanggalDaftar(tanggalDaftar);
+        setJenisPaket(jenisPaket);
+    }
+
+    
+
+
     
