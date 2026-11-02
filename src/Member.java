@@ -5,75 +5,17 @@
  */
 public class Member {
 
-    public static final String PAKET_BASIC = "Basic";
-    public static final String PAKET_PREMIUM = "Premium";
-    public static final String PAKET_VIP = "VIP";
-
     private static final String AWALAN_TELEPON = "0";
     private static final int PANJANG_MINIMAL_TELEPON = 10;
+    private static final String PAKET_BASIC = "Basic";
+    private static final String PAKET_PREMIUM = "Premium";
+    private static final String PAKET_VIP = "VIP";
+    private static final String NILAI_KOSONG = "-";
 
-    private static final String NAMA_DEFAULT = "Tidak diketahui";
-    private static final String TELEPON_DEFAULT = "-";
-    private static final String TANGGAL_DEFAULT = "-";
-}
+    // Nilai awal = nilai default yang aman jika data tidak valid
+    private String nama = "Tanpa Nama";
+    private String noTelepon = NILAI_KOSONG;
+    private String tanggalDaftar = NILAI_KOSONG;
+    private String jenisPaket = PAKET_BASIC;
 
-/**
-     * Constructor lengkap dengan 4 parameter.
-     * Mengisi nilai atribut melalui setter untuk menjamin validasi.
-     *
-     * @param nama          nama lengkap member
-     * @param noTelepon     nomor telepon aktif member
-     * @param tanggalDaftar tanggal pertama pendaftaran
-     * @param jenisPaket    jenis paket keanggotaan (Basic, Premium, VIP)
-     */
-    public Member(String nama, String noTelepon, String tanggalDaftar, String jenisPaket) {
-        setNama(nama);
-        setNoTelepon(noTelepon);
-        setTanggalDaftar(tanggalDaftar);
-        setJenisPaket(jenisPaket);
-    }
-
-**
-     * Constructor tanpa paket. Jenis paket otomatis diisi Basic.
-     *
-     * @param nama          nama lengkap member
-     * @param noTelepon     nomor telepon aktif member
-     * @param tanggalDaftar tanggal pertama pendaftaran
-     */
-    public Member(String nama, String noTelepon, String tanggalDaftar) {
-        this(nama, noTelepon, tanggalDaftar, PAKET_BASIC);
-    }
-
-/**
-     * Mengambil nama member.
-     *
-     * @return nama member
-     */
-    public String getNama() {
-        return nama;
-    }
-
-/**
-     * Mengubah nama member. Jika kosong atau hanya spasi, nama lama
-     * dipertahankan dan pesan penolakan dicetak.
-     *
-     * @param nama nama baru, tidak boleh kosong
-     */
-    public void setNama(String nama) {
-        if (nama == null || nama.trim().isEmpty()) {
-            System.out.println("Nama tidak boleh kosong atau hanya berisi spasi");
-            return;
-        }
-        this.nama = nama;
-    }
-
-/**
-     * Mengambil nomor telepon member.
-     *
-     * @return nomor telepon member
-     */
-    public String getNoTelepon() {
-        return noTelepon;
-    }
-
-
+    
