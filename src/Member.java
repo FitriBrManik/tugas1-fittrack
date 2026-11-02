@@ -34,6 +34,26 @@ public class Member {
         setJenisPaket(jenisPaket);
     }
 
+    /**
+     * Membuat member tanpa menentukan paket. Paket otomatis menjadi Basic.
+     *
+     * @param nama          nama lengkap member
+     * @param noTelepon     nomor telepon member
+     * @param tanggalDaftar tanggal pendaftaran
+     */
+    public Member(String nama, String noTelepon, String tanggalDaftar) {
+        this(nama, noTelepon, tanggalDaftar, PAKET_BASIC);
+    }
+
+     /**
+     * Mengambil nama member.
+     *
+     * @return nama member
+     */
+    public String getNama() {
+        return nama;
+    }
+
     
 
 
