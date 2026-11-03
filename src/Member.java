@@ -94,6 +94,28 @@ public class Member {
         this.noTelepon = noTelepon;
     }
 
+    /**
+     * Mengambil tanggal daftar member.
+     *
+     * @return tanggal daftar
+     */
+    public String getTanggalDaftar() {
+        return tanggalDaftar;
+    }
+
+    /**
+     * Mengubah tanggal daftar. Tanggal kosong ditolak.
+     *
+     * @param tanggalDaftar tanggal baru, contoh 17-08-2026
+     */
+    public void setTanggalDaftar(String tanggalDaftar) {
+        if (tanggalDaftar == null || tanggalDaftar.trim().isEmpty()) {
+            System.out.println("Tanggal daftar tidak boleh kosong");
+            return;
+        }
+        this.tanggalDaftar = tanggalDaftar.trim();
+    }
+
 
 
     
