@@ -142,6 +142,19 @@ public class Member {
         }
     }
 
+     /**
+     * Mengubah objek menjadi teks berlabel yang mudah dibaca.
+     *
+     * @return representasi teks member
+     */
+    @Override
+    public String toString() {
+        return "Member{nama='" + nama + "', noTelepon='" + noTelepon
+                + "', tanggalDaftar='" + tanggalDaftar
+                + "', jenisPaket='" + jenisPaket + "'}";
+    }
+}
+
 
 
 
