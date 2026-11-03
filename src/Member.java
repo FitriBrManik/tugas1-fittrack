@@ -116,6 +116,33 @@ public class Member {
         this.tanggalDaftar = tanggalDaftar.trim();
     }
 
+     /**
+     * Mengambil jenis paket member.
+     *
+     * @return jenis paket
+     */
+    public String getJenisPaket() {
+        return jenisPaket;
+    }
+
+    /**
+     * Mengubah jenis paket. Hanya Basic, Premium, atau VIP yang diterima.
+     * Jika tidak valid, paket lama dipertahankan.
+     *
+     * @param jenisPaket paket baru
+     */
+    public void setJenisPaket(String jenisPaket) {
+        if (PAKET_BASIC.equals(jenisPaket)
+                || PAKET_PREMIUM.equals(jenisPaket)
+                || PAKET_VIP.equals(jenisPaket)) {
+            this.jenisPaket = jenisPaket;
+        } else {
+            System.out.println("Jenis paket harus Basic, Premium, atau VIP (penulisan persis). "
+                    + "Paket tetap: " + this.jenisPaket);
+        }
+    }
+
+
 
 
     
