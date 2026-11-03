@@ -67,6 +67,33 @@ public class Member {
         this.nama = nama.trim();
     }
 
+    /**
+     * Mengambil nomor telepon member.
+     *
+     * @return nomor telepon member
+     */
+    public String getNoTelepon() {
+        return noTelepon;
+    }
+
+    /**
+     * Mengubah nomor telepon setelah divalidasi. Jika tidak valid,
+     * nomor lama dipertahankan dan pesan penolakan dicetak.
+     *
+     * @param noTelepon nomor baru, diawali 0 dan minimal 10 digit
+     */
+    public void setNoTelepon(String noTelepon) {
+        if (noTelepon == null
+                || !noTelepon.startsWith(AWALAN_TELEPON)
+                || noTelepon.length() < PANJANG_MINIMAL_TELEPON
+                || !noTelepon.matches("\\d+")) {
+            System.out.println("Nomor telepon harus diawali angka 0 dan minimal "
+                    + PANJANG_MINIMAL_TELEPON + " digit");
+            return;
+        }
+        this.noTelepon = noTelepon;
+    }
+
 
 
     
